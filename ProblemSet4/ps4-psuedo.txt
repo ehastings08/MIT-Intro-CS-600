@@ -1,0 +1,27 @@
+--------------------------------------------------------------------------
+Your algorithms should be plain English explanations for the steps your program will take to solve these problems.
+
+--------------------------------------------------------------------------
+Problem 2: Find the decoding that produces the maximum number of words in an encoded text.
+
+My Psuedocode:
+Write out your algorithm for Problem 2 here:
+Take the text as a string argument
+For shift in range 0 to 27, decode text and create unshifted text
+For word in unshifted text file, determine how many are real words
+Keep track of a 'max' file based on # real words
+Once iteration is complete, choose that file as the winner
+Return shift #
+
+Actual Pseudocode:
+1. set the maximum number of real words found to 0
+2. set the best shift to 0
+3. for each possible shift from 0 to 27:
+4. shift the entire text by this shift.
+5. split the text up into a list of the individual words.
+6. count the number of valid words in this list.
+7. if this number of valid words is more than the maximum number of real words, then
+8. record the number of valid words.
+9. set the best shift to the current shift
+10. increment the current possible shift by 1. Repeat the loop starting at 3.
+11. return the best shift.
